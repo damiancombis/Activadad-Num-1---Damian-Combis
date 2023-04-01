@@ -1,0 +1,436 @@
+:root{
+	--color-principal:rgb(146, 43, 33);
+	--color-verde-whats:rgb(30, 132, 73);
+	--tipografia-principal:'Mulish', sans-serif;
+	--tipografia-promocion:'Open Sans', sans-serif;
+	--tipografia-marca:'Kaushan Script', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+.body{
+
+		min-height: 100vh;
+
+}
+
+.caja-titulo-principal{
+
+					display: block;
+					background: var(--color-principal);
+					height: 100px; 
+					text-align: center;
+
+
+					
+
+}
+
+.contenido-titulo-principal{
+					display: inline-block;
+					font-family:var(--tipografia-marca);
+					text-align: center;
+					width: 350px;
+					font-size: 50px;
+					padding: 10px;
+					margin-top: -1px;
+					text-shadow: 0px 0px 3px #fff;
+					
+
+}
+
+.caja-seis-cuotas{
+
+			display: flex;
+			justify-content: center;
+			background: var(--color-principal);
+			font-family:var(--tipografia-principal);
+			margin: 10px 0px;
+
+}
+
+
+.after-seis-cuotas{
+						padding: 5px; 
+						color: rgb(255, 255, 255);
+						font-size: 25px;
+						line-height: 1.5;
+						font-family:var(--tipografia-principal);
+}
+.after-seis-cuotas::before{
+
+	content: "Todos los dias, ";
+	font-size: 18px;
+	color: #000;
+	font-family:var(--tipografia-principal);
+}
+
+.after-seis-cuotas::after{
+							content: " cuotas fijas";
+							color: rgb(245, 245, 245);
+							font-size: 15px;
+							font-family:var(--tipografia-principal);
+
+}
+
+.enlaces{
+		
+		display: flex;
+		justify-content: space-around;
+		margin-bottom:-5px;
+		padding: 10px;
+		
+
+}
+.enlace-directo:hover{
+
+		transform: scale(1.3);
+		transition: 1s;
+	
+}
+
+.enlace-directo-contenido:Link{
+
+    color: var(--color-principal) ;
+
+}
+
+.enlace-directo-contenido:hover{
+
+	color: #000;
+
+}
+
+.enlace-directo-contenido{
+
+
+	font-family: var(--tipografia-principal);
+	text-decoration: none;
+
+}
+
+.caja-imagen-principal{
+						width: 100%;
+						height: 500px;
+						background: var(--color-verde-whats);
+						margin-bottom: 10px;
+						background-image: url(https://www.palco23.com/files/2020/18_recursos/deporte%20outdoor/zapatilla-948.jpg);
+						background-size: 100% 100%;
+						background-origin: border-box;
+						object-position: center center;
+					
+						
+}
+
+
+.promo-principal{
+
+				display: flex;
+				justify-content: space-around;	
+				text-align: center;
+				padding: 5px;				
+
+
+}
+
+.promo-principal-items{
+
+				
+				background-color: var(--color-principal);
+				flex-basis: 310px;
+				
+				font-size: 20px;
+				border: 2px solid #000;
+				height: 75px;
+				border: 2px solid #fff;
+				box-shadow: 0px 0px 15px  0 var(--color-principal);
+
+				
+}
+
+.promo-principal-items-text{
+
+					padding: 10px;
+					margin-top:-1px;
+					color: #fff;
+					font-family: var(--tipografia-principal);
+
+}
+
+.promo-principal-b{
+
+					font-family: var(--tipografia-promocion);
+					font-weight: 100;
+
+}
+
+.foto-propaganda_pri{
+					display: flex;
+					justify-content: space-around;
+					margin: 15px;
+
+}
+
+.foto-propaganda_pritamaño{
+					flex-grow: 1;
+					width: 400px;
+					height: 250px;
+					margin-left: 10px;
+					object-fit: cover;
+
+}
+
+
+.nuestras-marcas{
+
+					font-family: var(--tipografia-principal);
+					font-size: 30px;
+					margin-left: 20px;
+
+}
+
+.items-nuestras_marcas{
+
+					display: flex;
+					justify-content: space-around;
+					
+
+}
+
+.item-icono{
+				
+			padding: 20px;	
+			
+}
+
+.item-icono_foto{
+					width: 120px;
+					height: 120px;
+}
+
+
+.foto-propaganda{
+					display: flex;
+					justify-content: space-around;
+					margin-top:40px;
+}
+
+.foto-propaganda_tamaño{
+					flex-grow: 1;
+					width: 600px;
+					height: 400px;
+					margin-left: 10px;
+
+}
+
+
+
+
+
+.final-de-pagina{
+
+
+		display: grid;
+		margin-top: 25px;
+	
+		grid-template-columns: repeat(5, 1fr);
+		height: 450px;
+		
+		background-color: #C8BFBD;
+		text-align: center;
+		grid-column-gap: 10px;
+		border: 3px solid #000;
+		justify-content: center;
+		align-content: center;
+
+		
+}
+
+.fo-logos{
+
+		border: 3px solid blue;
+		font-family: 'Roboto', sans-serif;
+		
+
+}
+
+.institucional-fo{
+	
+		border: 3px solid blue; 
+		font-family: 'Roboto', sans-serif;
+		
+
+
+}
+.ayuda-fo{
+
+	border: 3px solid blue;
+   font-family: 'Roboto', sans-serif;
+  
+}
+
+.redes-sociales-fo{
+
+	border: 3px solid blue;
+	font-family: 'Roboto', sans-serif;
+	
+
+}
+
+.ate-cliente-fo{
+
+	border: 3px solid blue;
+	font-family: 'Roboto', sans-serif;
+	
+
+}
+
+.insti-fo-h5{
+
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+	
+
+
+}
+
+.insti-enla{
+
+		list-style-type: none;
+		margin-top: -25px;
+		margin-right: 35px;
+
+}
+
+
+.fo-li{
+
+	padding: 15px 0px;
+	text-decoration: none;
+
+}
+
+.institucional-fo-enla{
+
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.5s;
+
+
+}	
+
+.institucional-fo-enla:hover{
+
+		color: var(--color-principal);
+		text-shadow: 0px 0px 0px #000;
+		
+}
+
+.ayuda-fo-h5{
+
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.ayuda-enla{
+
+		list-style-type: none;
+		margin-right: 35px;
+		margin-top: -25px;
+
+}
+
+.ayuda-fo-li{
+
+		padding: 15px 0px;
+		text-decoration: none;
+
+}
+
+.ayuda-ul-li-enla{
+
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.5s;
+
+}
+
+.ayuda-ul-li-enla:hover{
+
+	color: var(--color-principal);
+	text-shadow: 0px 0px 0px #000;
+
+}
+
+.redes-tit{
+
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.redes-fo-ul{
+
+	list-style-type: none;
+	margin-right: 35px;
+	margin-top: -25px;
+}
+
+.redes-fo-li{
+
+		padding: 15px 0px;
+		text-decoration: none;
+
+}
+
+.redes-ul-li-enla{
+
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.5s;
+
+}
+
+.redes-ul-li-enla:hover{
+
+	color: var(--color-principal);
+	text-shadow: 0px 0px 0px #000;
+
+}
+
+.ate-tit-fo{
+
+	font-size: 25px;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.ate-fo-ul{
+
+	list-style-type: none;
+	margin-right: 35px;
+	
+
+}
+
+.ate-fo-ul-li{
+
+		padding: 15px 0px;
+		text-decoration: none;
+}
+
+.ate-fo-ul-li-enla{
+
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.5s;
+
+}
+
+.ate-fo-ul-li-enla:hover{
+
+	color: var(--color-principal);
+	text-shadow: 0px 0px 0px #000;
+
+}
