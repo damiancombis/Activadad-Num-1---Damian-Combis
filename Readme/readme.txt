@@ -1,35 +1,47 @@
-Actividad Num°1
 
-En este proyecto intento replicar la pagina de Dexter (indumentaria).
-Elegi la indumentaria porque en algun momento me gustaria trabajar haciendo este tipo de paginas.
 
-La funcion validacion que lo que hace es tomar la respuesta de un usuario y devolver "1" para "Si" "2" para "no" y "3" para cualquier otra cosa que no sea "SI" o "NO".
+								Actividad Num°2
 
-La funcion validacion la utilizo dentro de un FOR para darle 3 oportunidades al cliente de introducir bien la respuesta
-con un alert que le avisa cuantos intentos le van quedando.
-tambien podria poner un alert que le avise que tiene que responder SI O NO. 
+1 - Funcion cantidadCaracteresString toma como parametro "string".
+ese string lo usa en un promp y la respuesta del usuario se compara (cant/caracteres) metiante lenght > 4. La funcion retorna string unicamente si la misma es mayor que 4.
 
-Para finalizar si la respuesta es SI hace una cosa y si la respuesta es NO hace otra.
+2- Funcion siNO toma como parametro "pregunta" esa pregunta la usa en un prompt con un toLowerCase y guarda la respuesta de usuario en una variable respuesta que luego la utilizo  para comparar en un while y si el usuario responde Si return y No return
 
-Actividad Num°2
+3- Funcion validacionNombreUsuarioBool pide el nombre de usuario ya existente mediante un prompt y con some busca el nombre de usuario. return true o false
 
-En esta actividad utilize las respuestas de la actividad anterior.
+3- Funcion validacionContraUsuarioBool pide la contraseña de usuario ya existente mediante un prompt y con some busca la contraseña del usuario. return true o false
 
-En el caso de que respondiera * 1 ("SI") * Le pide al cliente que ingrese su usuario (valido el nombre de usuario con some) en el caso de escribir mal su nombre de usuario se lo vuelve a pedir(tiene 3 intentos) pero si el nombre de usuario esta bien le pide la contraseña (valido la contraseña de usuario con some)  en el caso de escribir mal su contraseña se lo vuelve a pedir(tiene 3 intentos). en todo caso de ser correcto le da la bienvenida o lo dirige a la pagina.
+						/*********/
 
-En el caso de que respondiera * 2 ("NO") * le consulta al cliente si quiere crear un usuario.
+linea 32 creo una class objeto (usuarios) con nombre y contraseña. Tiene un metodo llamado bienvenida que muestra usuario y contraseña al cliente.
+Despues creo un array misUsuarios VACIO pero seguido de eso creo un usuario de prueba para poder entrar en la pag como un usuario ya existente.
 
-Si el cliente responde * ("SI") * le pide que ingrese el nombre de usuario, ese nombre de usuario es validado con la funcion cantidadCaracteres(esta funcion toma una variable y utiliza el metodo length para comparar tiene mas de 4 caracteres) el resultado de esa comparacion TRUE or FALSE se guarda dentro de la varible TEST
+					/*********/
+Al comenzar el codigo utilizo la funcion siNO para consultarle al cliente si tiene usuario, la respuesta la guardo en una variable "respuesta"
 
-linea 218 - Si TEST es * FALSE * le vuelve a pedir que ingrese su nombre de usuario indicando anteriormente al cliente que debe tener mas de 4 digitos dandole con un ciclo for 3 intentos. En el caso de ingresar bien el usuario, le pide la contraseña y utilizo la variable TESTPASSWORD para la respuesta de CANTIDADCARACTERES (usando el mismo metodo de validacion que use para validar el nombre de usuario). En el caso de que TESTPASSWORD sea TRUE carga el usuario al array de objetos 
+1- En el caso que diga que "si" utilizo la funcion validacionNombreUsuarioBool y si la respuesta es false con un for y la funcion validacionNombreUsuarioBool le doy tres intentos. En el caso de true corta el for con un break.
 
-linea 275 - Si TEST es * TRUE * le pide la contraseña y utilizo la variable TESTPASSWORD para la respuesta de CANTIDADCARACTERES (usando el mismo metodo de validacion que use para validar el nombre de usuario). En el caso de que TESTPASSWORD sea TRUE carga el usuario al array de objetos 
+Si el usuario existe ("usuarioBool") utilizo la funcion validacionContraUsuarioBool y si la respuesta es false con un for y la funcion validacionContraUsuarioBool le doy tres intentos. En el caso de true corta el for con un break.
+Si la contraseña es correcta le da la bienvenida.
 
-linea 328 utilizo un for of para mostrar los usuarios ya creados y tambien el creado por el cliente
+2- En el caso de que diga que "no" con la funcion siNO le consulta al cliente si quiere crear una cuenta
 
-linea 338 le consulto al cliente si quiere ver los productos de oferta. utilizo la funcion validacion para su respuesta en el caso  de responder si le muestro las ofertas con un for of y separo los productos con un join para que se pueda distinguir con mas claridad
+Si el cliente quiere crear una cuenta ("respuestaCrearUsuario") - utilizo un do-while y la funcion cantidadCaracteresString / el ciclo corta si el cliente no quiere volver a intentar o en el caso de que el cliente cumpla con la condicion de nombre de usuario 
 
-linea 381 le consulto al cliente si quiere ver los ultimos lanzamientos. utilizo la funcion validacion para su respuesta en el caso  de responder si le muestro los productos con la funcion porCadaUno que toma el array y lo muestra con el console.log
+En el caso de que el nombre de usuario cumpla con la condicion ("nombreUsuario")-utilizo un do-while y la funcion cantidadCaracteresString / el ciclo corta si el cliente no quiere volver a intentar o en el caso de que el cliente cumpla con la condicion  de contraseña usuario
+
+si la contraseña cumple con la condicion("contraUsuario") crea el usuario guardando el nombre de usuario y contraseña en el array misUsuarios y utliza el metodo bienvenida
+
+Por ultimo con un for of muestro los datos de misUsuarios por consola.
+
+
+
+
+
+
+
+
+
 
 
 
