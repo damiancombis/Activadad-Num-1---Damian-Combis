@@ -26,18 +26,26 @@
          let contraBool = misUsuarios.some((unUsuario) => unUsuario.contra ===  parseInt(contraValida));
          return contraBool;
      }
+
+     function cargaUsuario(nombreUsuario,contraUsuario){
+      const unUsuario = new Usuarios(nombreUsuario, contraUsuario);
+                                 misUsuarios.push(unUsuario);
+     }
    
     //*************************************************************************************************************************//
-
+    
     class Usuarios {
       constructor(nombre, contra){
         this.nombre = nombre.toUpperCase();
         this.contra = contra;
+        
       }
-      bienvenida(){
+      bienvenida(nombre,contra){
          alert("¡Bienvenido a King Lion! Tu nombre de usuario es: " + this.nombre + " / Tu contraseña es: " + this.contra);
       }
     }
+
+
      const misUsuarios = [];
      const testUsuarioNombre = "CHAMAN";  
      const testUsuarioContra = 12345;
@@ -46,6 +54,8 @@
 
     //*************************************************************************************************************************//
 
+    
+
     let respuesta = siNO("¿Bienvenido usted tiene usuario?");
     if (respuesta === "si"){
         let usuarioBool = validacionNombreUsuarioBool();
@@ -53,9 +63,7 @@
                    for ( let i = 1 ; i <= 3; i++) {
                         usuarioBool = validacionNombreUsuarioBool();
                       if (!usuarioBool) {
-                                    if (i === 3) {
-                                    alert("Se te acabaron los intentos");
-                                    }
+                                    i === 3 && alert("Se te acabaron los intentos");
                        } else if( usuarioBool ){
                                                break;
                        }
@@ -68,9 +76,7 @@
                  for ( let i = 1 ; i <= 3; i++) {
                       contraBool = validacionContraUsuarioBool();
                     if (!contraBool) {
-                                    if (i === 3) {
-                                    alert("Se te acabaron los intentos");
-                                    }
+                                    i === 3 && alert("Se te acabaron los intentos");
                     } else if( contraBool ){
                                             break;
                     }
@@ -106,12 +112,8 @@
                             reintentar = siNO("Quiere volver a intentarlo");
                            }
                         }while(contraUsuario == null && reintentar  === "si")
-
-                                 if (contraUsuario != null){
-                                 const unUsuario = new Usuarios(nombreUsuario, contraUsuario);
-                                 misUsuarios.push(unUsuario);
-                                 unUsuario.bienvenida();
-                                 }
+                                contraUsuario != null && cargaUsuario(nombreUsuario, contraUsuario);
+                               contraUsuario != null && alert("Bienvenido a King Lion");
                        }
                     }  
                   }       
@@ -122,3 +124,53 @@
         console.log("La contraseña del Usuario numero " + i + " es: " + unUsuario.contra );
         i++;
     }
+
+    
+
+   
+  const PROMOBICI= document.getElementById("promoBici");
+  const promoHockey= document.getElementById("promoHockey");
+  const promoYoga= document.getElementById("promoYoga");
+  const promoBotines= document.getElementById("promoBotines");
+  
+  PROMOBICI.onmousemove = () =>{
+         PROMOBICI.innerText = "50 % OFF";
+  }
+  PROMOBICI.onmouseout = () =>{
+         PROMOBICI.innerText = "Desde $799";
+  }
+   promoHockey.onmousemove = () =>{
+         promoHockey.innerText = "75 % OFF";
+  }
+  promoHockey.onmouseout = () =>{
+         promoHockey.innerText = "Desde $999";
+  }
+
+  promoYoga.onmousemove = () =>{
+         promoYoga.innerText = "45 % OFF";
+  }
+  promoYoga.onmouseout = () =>{
+         promoYoga.innerText = "Desde $499";
+  }
+
+  promoBotines.onmousemove = () =>{
+         promoBotines.innerText = "35 % OFF";
+  }
+  promoBotines.onmouseout = () =>{
+         promoBotines.innerText ="Desde $20999";
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
