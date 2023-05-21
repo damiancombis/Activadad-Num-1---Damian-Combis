@@ -52,29 +52,37 @@
                 </div>
 	</header>
 
-	<nav>
-		<div class="enlaces">
-
-			<div class="enlace-directo">
+<nav>
+	<div id="boxEnlaces">
+		<ul class="enlaces">
+			<li class="enlace-directo">
 				<a class="enlace-directo-contenido" href="indexCategorias.html">Categoria</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Mujer</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Hombre</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Marcas</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="indexZapatillas.html">Zapatillas</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Liquidación</a>
-			</div>
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="">Mujer</a>
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="">Hombre</a>
+			</li>
+			<li class="enlace-directo">
+				<a id="subEnlaceClick" class="enlace-directo-contenido" href=" ">Marcas</a>
 				
-		</div>
+					<ul id="ulSubEnlaceClick"class="subEnlace">
+						  <!--  SEGUIR -->
+				    </ul>
+				
+				
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="indexZapatillas.html">Zapatillas</a>
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="">Liquidación</a>
+			</li>
+
+	    </ul>
+    </div>
+		
 	</nav>
 		
 
@@ -92,27 +100,27 @@
 
 			<div class="promo-principal-items" id="promoPrincipalItem">
 				<h4 class="promo-principal-items-text">
-					<a class="promo-principal-items-text" href="google.com">RUNNING</a><br><b class="promo-principal-b" id="promoBici">Desde $799 </b>
+					<a class="promo-principal-items-text" href="">RUNNING</a><br><b class="promo-principal-b" id="promoBici">Desde $799 </b>
 				</h4>
 			</div>
 
 			<div class="promo-principal-items">
 				<h4 class="promo-principal-items-text">
-					<a class="promo-principal-items-text" href="google.com">MODA</a><br><b class="promo-principal-b" id="promoHockey">Desde $999 </b>
-				</h4>
-				
-			</div>
-
-			<div class="promo-principal-items">
-				<h4 class="promo-principal-items-text">
-					<a class="promo-principal-items-text" href="google.com">YOGA</a><br><b class="promo-principal-b" id="promoYoga">Desde $499 </b>
+					<a class="promo-principal-items-text" href="">MODA</a><br><b class="promo-principal-b" id="promoHockey">Desde $999 </b>
 				</h4>
 				
 			</div>
 
 			<div class="promo-principal-items">
 				<h4 class="promo-principal-items-text">
-					<a class="promo-principal-items-text" href="google.com">BOTINES</a><br><b class="promo-principal-b" id="promoBotines">Desde $20999 </b>
+					<a class="promo-principal-items-text" href="">YOGA</a><br><b class="promo-principal-b" id="promoYoga">Desde $499 </b>
+				</h4>
+				
+			</div>
+
+			<div class="promo-principal-items">
+				<h4 class="promo-principal-items-text">
+					<a class="promo-principal-items-text" href="">BOTINES</a><br><b class="promo-principal-b" id="promoBotines">Desde $20999 </b>
 				</h4>
 				
 			</div>
@@ -178,7 +186,7 @@
 
 
 		
-
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="./Script/main.js"></script>
 	</body>
 

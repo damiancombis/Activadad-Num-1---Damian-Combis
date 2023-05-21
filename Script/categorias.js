@@ -9,7 +9,7 @@ function cargarTodosProductos(){
 		<img class="shopImg" src="${Producto.img}"> 
 		</div><br>
 		<div class="shopNombre">
-		<h4 >${Producto.nombre}</h4>
+		<h4 >${Producto.nombre}</h4> 
 		 </div>
         <div class="shopDetalle">
         	<p > ${Producto.detalle}</p>
@@ -24,23 +24,6 @@ function cargarTodosProductos(){
         boxProducto.append(div);
 	})	
 }
-function filterGenero(sexo){
- const miArrayGeneros = PRODUCTOS.filter((Producto) => Producto.genero.includes(sexo))
- return miArrayGeneros
-}
-function filterCategoria(categoria){
- const miArrayCategorias = PRODUCTOS.filter((Producto) => Producto.categoria.includes(categoria))
- return miArrayCategorias
-}
-function filterTipoProducto(tipo){
- const miArrayTipo = PRODUCTOS.filter((Producto) => Producto.tipo.includes(tipo))
- return miArrayTipo
-}
-
-function deleteTable(){
-	let boxProducto = document.getElementById("cajaProducto")
-		boxProducto.innerHTML = "";
-	}
 function resultadoFilter(Array){
 	 deleteTable();
 	 let boxProducto = document.getElementById("cajaProducto")
@@ -64,9 +47,26 @@ function resultadoFilter(Array){
 			<button class="agregarBTN" id="${Producto.id}">Agregar</button>
 		 </div>
          `;
-        boxProducto.append(div);
-	})
+        boxProducto.append(div); })
 }
+function filterGenero(sexo){
+ const miArrayGeneros = PRODUCTOS.filter((Producto) => Producto.genero.includes(sexo))
+ return miArrayGeneros
+}
+function filterCategoria(categoria){
+ const miArrayCategorias = PRODUCTOS.filter((Producto) => Producto.categoria.includes(categoria))
+ return miArrayCategorias
+}
+function filterTipoProducto(tipo){
+ const miArrayTipo = PRODUCTOS.filter((Producto) => Producto.tipo.includes(tipo))
+ return miArrayTipo
+}
+function deleteTable(){
+	let boxProducto = document.getElementById("cajaProducto")
+		boxProducto.innerHTML = "";
+}
+
+
 
 const agregarCarrito = (prodId) => {
 let item = PRODUCTOS.find((producto) => producto.id === prodId);
@@ -121,6 +121,12 @@ const PRODUCTOS = [
 let carrito = [];
 
 /*********************************************************************************************/
+
+let mostrarCarrito = document.getElementById("mostrarCarrito")
+mostrarCarrito.onmousemove = () =>{
+console.log("hola mundo")
+};
+
 cargarTodosProductos();
 
 let masculinoBtnFilter = document.getElementById("masculinoBTN");
@@ -330,51 +336,8 @@ agregarBtn9.onclick = () =>{
 	})
 }
 
-let carroIcon = document.getElementById("carritoIcon");
-carroIcon.onmousemove = () =>{
-	let divBox = document.createElement("div");
-	 carrito.forEach((Producto)=>{
-		const div = document.createElement('div')	
-		// div.classList.add(`boxShopDom`)
-		div.innerHTML = `
-		<div>
-		<h4 >${Producto.nombre}</h4>
-		 </div>
-        <div>
-        	<p >${Producto.detalle}</p>
-		 </div>
-        <div>
-        	<p>$${Producto.precio}</p>
-		 </div>
-         `;
-        divBox.append(div);
-	})
-}
-
-
-/***********************************************************************************/
 
 
 
 
 
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
- /****************************************************************************************/					
-
-// let miArrayGeneros = filterCategoria("running"); 
-// resultadoFilter(miArrayGeneros);                           FUNCIONA
-
-/**********************************************************************************/

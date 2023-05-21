@@ -39,23 +39,45 @@
 
 }
 
+
 .carritoIcon{
 				display: inline-block;
 				position: absolute;
 				left:91%;
-				top: 27px;
+				top: 20px;
+
 				
 			}
 .cantCarrito{
 				display: inline-block;
 				position: absolute;
-				top: -12px;
+				top: -20px;
 				left:95%;
 				
 				color: white;				
 				font-size: 40px;
 }
 
+.verCarrito{
+			position: relative;
+			top: 70px;
+			left: 585px;
+			width: 100px;
+}
+.boxListaCarrito{
+	position: absolute;
+	background-color: white;
+	z-index: 1;
+	width: 300px;
+	height: 500px;
+	top: 15vh;
+	right: 0vh;
+	
+
+
+
+
+}
 .caja-seis-cuotas{
 
 			display: flex;
@@ -90,26 +112,32 @@
 
 }
 
+
+/*******************************************************************************/
 .enlaces{
 		
 		display: flex;
 		justify-content: space-around;
-		margin-bottom:-5px;
-		padding: 10px;
-		
-
+		margin: 5px 0px;
+		padding: 2px;
 }
+
 .enlace-directo:hover{
 
 		transform: scale(1.3);
 		transition: 1s;
-		text-decoration: none;
+		
 	
+}
+
+.enlace-directo{
+	overflow: hidden;
 }
 
 .enlace-directo-contenido:Link{
 
     color: var(--color-principal) ;
+
 
 }
 
@@ -124,8 +152,16 @@
 
 	font-family: var(--tipografia-principal);
 	text-decoration: none;
+	 color: var(--color-principal) ;
 
 }
+
+
+.subEnlace {
+				display:none;
+
+
+			   }
 
 .caja-imagen-principal{
 						width: 100%;
@@ -249,213 +285,6 @@
 
 
 
-.final-de-pagina{
-
-
-		display: grid;
-		margin-top: 25px;
-	
-		grid-template-columns: repeat(5, 1fr);
-		height: 450px;
-		
-		background-color: #C8BFBD;
-		text-align: center;
-		grid-column-gap: 10px;
-		border: 3px solid #000;
-		justify-content: center;
-		align-content: center;
-
-		
-}
-
-.fo-logos{
-
-		border: 3px solid blue;
-		font-family: 'Roboto', sans-serif;
-		
-
-}
-
-.institucional-fo{
-	
-		border: 3px solid blue; 
-		font-family: 'Roboto', sans-serif;
-		
-
-
-}
-.ayuda-fo{
-
-	border: 3px solid blue;
-   font-family: 'Roboto', sans-serif;
-  
-}
-
-.redes-sociales-fo{
-
-	border: 3px solid blue;
-	font-family: 'Roboto', sans-serif;
-	
-
-}
-
-.ate-cliente-fo{
-
-	border: 3px solid blue;
-	font-family: 'Roboto', sans-serif;
-	
-
-}
-
-.insti-fo-h5{
-
-	font-size: 25px;
-	font-family: 'Roboto', sans-serif;
-	
-
-
-}
-
-.insti-enla{
-
-		list-style-type: none;
-		margin-top: -25px;
-		margin-right: 35px;
-
-}
-
-
-.fo-li{
-
-	padding: 15px 0px;
-	text-decoration: none;
-
-}
-
-.institucional-fo-enla{
-
-	text-decoration: none;
-	color: black;
-	transition-duration: 0.5s;
-
-
-}	
-
-.institucional-fo-enla:hover{
-
-		color: var(--color-principal);
-		text-shadow: 0px 0px 0px #000;
-		
-}
-
-.ayuda-fo-h5{
-
-	font-size: 25px;
-	font-family: 'Roboto', sans-serif;
-
-}
-
-.ayuda-enla{
-
-		list-style-type: none;
-		margin-right: 35px;
-		margin-top: -25px;
-
-}
-
-.ayuda-fo-li{
-
-		padding: 15px 0px;
-		text-decoration: none;
-
-}
-
-.ayuda-ul-li-enla{
-
-	text-decoration: none;
-	color: black;
-	transition-duration: 0.5s;
-
-}
-
-.ayuda-ul-li-enla:hover{
-
-	color: var(--color-principal);
-	text-shadow: 0px 0px 0px #000;
-
-}
-
-.redes-tit{
-
-	font-size: 25px;
-	font-family: 'Roboto', sans-serif;
-
-}
-
-.redes-fo-ul{
-
-	list-style-type: none;
-	margin-right: 35px;
-	margin-top: -25px;
-}
-
-.redes-fo-li{
-
-		padding: 15px 0px;
-		text-decoration: none;
-
-}
-
-.redes-ul-li-enla{
-
-	text-decoration: none;
-	color: black;
-	transition-duration: 0.5s;
-
-}
-
-.redes-ul-li-enla:hover{
-
-	color: var(--color-principal);
-	text-shadow: 0px 0px 0px #000;
-
-}
-
-.ate-tit-fo{
-
-	font-size: 25px;
-	font-family: 'Roboto', sans-serif;
-
-}
-
-.ate-fo-ul{
-
-	list-style-type: none;
-	margin-right: 35px;
-	
-
-}
-
-.ate-fo-ul-li{
-
-		padding: 15px 0px;
-		text-decoration: none;
-}
-
-.ate-fo-ul-li-enla{
-
-	text-decoration: none;
-	color: black;
-	transition-duration: 0.5s;
-
-}
-
-.ate-fo-ul-li-enla:hover{
-
-	color: var(--color-principal);
-	text-shadow: 0px 0px 0px #000;
-
-}
 
 /*   		ZAPATILLAS         */
 
@@ -601,7 +430,7 @@
 	top: 220px;
 }
 
-.liquidacionMain{
+.categoriasMain{
 				display: inline-block;
 				position: absolute;
 				width: 155vh;

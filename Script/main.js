@@ -1,3 +1,4 @@
+
   const PROMOBICI= document.getElementById("promoBici");
   const promoHockey= document.getElementById("promoHockey");
   const promoYoga= document.getElementById("promoYoga");
@@ -31,6 +32,11 @@
   }
 
 
+      
+
+
+
+ 
 
 
 

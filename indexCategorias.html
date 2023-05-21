@@ -43,32 +43,43 @@
                     <p id= "numCarrito"class="cantCarrito">
                 			0
                     </p>
-                </div>
+                    
+            </div>
+            <input type="button" class = "verCarrito" id = "mostrarCarrito" value="Carrito">
+            
 	</header>
 
-	<nav>
-		<div class="enlaces">
-
-			<div class="enlace-directo">
+<nav>
+	<div id="boxEnlaces">
+		<ul class="enlaces">
+			<li class="enlace-directo">
 				<a class="enlace-directo-contenido" href="indexCategorias.html">Categoria</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Mujer</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Hombre</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Marcas</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="indexZapatillas.html">Zapatillas</a>
-			</div>
-			<div class="enlace-directo">
-				<a class="enlace-directo-contenido" href="google.com">Liquidación</a>
-			</div>
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="">Mujer</a>
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="">Hombre</a>
+			</li>
+			<li class="enlace-directo">
+				<a id="subEnlaceClick" class="enlace-directo-contenido" href=" ">Marcas</a>
 				
-		</div>
+					<ul id="ulSubEnlaceClick"class="subEnlace">
+						  <!--  SEGUIR -->
+				    </ul>
+				
+				
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="indexZapatillas.html">Zapatillas</a>
+			</li>
+			<li class="enlace-directo">
+				<a class="enlace-directo-contenido" href="">Liquidación</a>
+			</li>
+
+	    </ul>
+    </div>
+		
 	</nav>
 		
 
@@ -76,7 +87,7 @@
 			<b class="after-seis-cuotas">6</b>
 		</div>
 
-		<main class="liquidacionMain">
+		<main class="categoriasMain">
 
 		<div id="cajaProducto" class="boxShopDom">
 			

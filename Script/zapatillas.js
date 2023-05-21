@@ -17,7 +17,7 @@ const agregarCarrito = (prodId) => {
 let item = PRODUCTOS.find((producto) => producto.id === prodId);
 	carrito.push(item);
 	numTotalCarrito(carrito)
-	sessionStorage.setItem("ultimoCarrito", JSON.stringify(carrito));
+	// sessionStorage.setItem("ultimoCarrito", JSON.stringify(carrito));
 }
 
 function numTotalCarrito(array){
@@ -59,6 +59,39 @@ const PRODUCTOS = [
 
 let carritoJSON = [];
 let carrito = [];
+
+
+let mostrarCarrito = document.getElementById("mostrarCarrito");
+let boxCarrito = document.getElementById("boxCarrito");
+
+
+mostrarCarrito.onclick = () =>{	
+   const div = document.createElement('div')	
+   div.classList.add(`boxListaCarrito`)
+   carrito.forEach((Producto)=>{
+		div.innerHTML = `
+		<div>
+		<h4 >${Producto.nombre}</h4>
+		 </div>
+        <div  >
+        	<p>$${Producto.precio}</p>
+		 </div>
+         `;
+       
+	})	
+      
+   	 boxCarrito.append(div);    
+  }	
+
+
+
+
+
+
+ 
+
+
+
 
 
 let NOEXISTE = sessionStorage.getItem("ultimoNumeroCarrito");
