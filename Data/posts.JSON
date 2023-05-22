@@ -1,8 +1,12 @@
+
 [
-{"nombre": "zapatillas Nike Air Max", "precio" : 40000 , "id" : 1 , "genero" : "masculino", "categoria": "running" },
-{"nombre": "zapatillas Puma Thunder Spectra", "precio" : 50000 , "id" : 2 , "genero" : "masculino", "categoria": "moda" },
-{"nombre": "zapatillas Reebok Vetements", "precio" : 67000 , "id" : 3 , "genero" : "masculino", "categoria": "moda" },
-{"nombre": "zapatillas Air Jordan Black Cat", "precio" : 55000 , "id" : 4 , "genero" : "masculino", "categoria": "running" },
-{"nombre": "zapatillas Nike Cortez", "precio" : 25000 , "id" : 5 , "genero" : "masculino", "categoria": "moda" },
-{"nombre": "zapatillas New Balance Staud", "precio" : 33000 , "id" : 6 , "genero" : "masculino", "categoria": "running" }
-]
+  {
+    "nombre": "Pantalon Nike" ,
+    "tipo": "pantalones "  
+  },
+  {
+    "nombre": "Pantalon Nike" ,
+    "tipo": "pantalones "  
+  },
+];
+

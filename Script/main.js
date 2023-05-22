@@ -1,3 +1,33 @@
+function anuncioBancoProvincia(){
+  Swal.fire({
+  title: '¡Descuento imperdible!',
+  text: 'Todos los miercoles y jueves del mes con tu tarjeta Provincia tenes un 30% de descuento en TODOS los productos.',
+  imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR034Usy-cdyt1Y7SwDzDQ-9WBalDB2QAODCg&usqp=CAU',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+})
+}
+
+
+function propagandaProvincia(){
+  let isValido = sessionStorage.getItem("banderaAnuncioProvincia") == "true";
+  let banderaBancoProvincia = false;
+  if (isValido) {
+    banderaBancoProvincia =!banderaBancoProvincia;
+  }
+  if (!banderaBancoProvincia){
+    setInterval(() => {
+      if(!banderaBancoProvincia){
+        anuncioBancoProvincia();
+        banderaBancoProvincia = true;
+        sessionStorage.setItem("banderaAnuncioProvincia", JSON.stringify(banderaBancoProvincia));
+      }
+    }, 2000);
+  } 
+}
+
+  propagandaProvincia();
 
   const PROMOBICI= document.getElementById("promoBici");
   const promoHockey= document.getElementById("promoHockey");
