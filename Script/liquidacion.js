@@ -1,4 +1,4 @@
- fetch("./Data/posts.json", { mode: "no-cors" })
+ fetch("./Data/post.json", { mode: "no-cors" })
  	.then(res => res.json())
  		.then((data)=>{
  		console.log(data);

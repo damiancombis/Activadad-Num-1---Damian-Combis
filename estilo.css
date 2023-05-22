@@ -415,10 +415,23 @@
 	font-family: var(--tipografia-promocion);
 }
 
+.eliminarFiltros{
+	position: relative;
+	top: 105px;
+	color:red;
+}
+
+.btneliminarFiltros{
+	height: 15px;
+	weight: 5px;
+}
+
 .btn{
 	height: 15px;
 	weight: 5px;
 }
+
+
 
 .generoAside{
 	position: relative;

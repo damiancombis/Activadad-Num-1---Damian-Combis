@@ -201,6 +201,12 @@ botinesBtnFilter.onclick = () =>{
 	resultadoFilter(miArrayTipo);  
 }
 
+let deleteBtnFilter = document.getElementById("eliminarBTN");
+deleteBtnFilter.onclick = () =>{
+	deleteTable();	
+	cargarTodosProductos();
+}
+
 let agregarBtn1 = document.getElementById("agregarbtn1");
 agregarBtn1.onclick = () =>{
 	agregarCarrito(PRODUCTOS[0].id)
