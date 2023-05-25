@@ -1,28 +1,40 @@
 
 
-													Funciones:
+												Main-Funciones:
+* anuncioBancoProvincia 
+Sweet Alert
 
-* recuperarCarrito 
-Pide por parametro ("ultimoNumCarro") el numero de productos agregados al carrito guardado en ultimoNumeroCarrito -> (setItem) Si el if ultimoNumCarro es verdadero, entra a otro if donde x parametro con getItem tomo los datos del ultimoCarrito("los productos del ultimo carrito").
-En el caso de que el if sea verdadero con getItem tomo nuevamente los datos del ultimoCarrito y los guarda en la var PILA. Seguido utilizo JSON.parse para trasformar los valores de PILA y lo guardo en la var carritoJSON que con Map los transformo nuevamente en productos(objetos) y los vuelvo a agregar a su origen ("carrito (array)") tambien utiliza la funcion setNumUltimoCarrito que pide por parametro un array y recorre ese array para contar la cantidad de iteraciones y retorna la dicha cantidad donde la guarda en una var llamada num y por ultimo la var un es ingresada al parametro de la funcion modificaNumCarrito que pide por parametro un numero que utiliza para modificar el contador del carrito que es tomado con un getElementById("numCarrito")
+* descuentosMove
+Eventos "onmousemove" + innerText
 
-* agregarCarrito
-Pide por parametro el id del producto  y los compara con un find y en el caso de encontrar el producto agrega el producto al array y guarda el array con esa informacion("setItem") tranformando previamente con JSON.stringify ("clave ultimoCarrito"). Dentro tambien incluye la funcion numTotalCarrito que pide por parametro un array y recorre ese array para contar la cantidad de iteraciones y modifica el contador del carrito("contador que esta al lado del carrito en la pagina")
+* propagandaProvincia 
+funcion para no mostrar mas de una vez un anuncio(anuncioBancoProvincia)
+Solicita banderaAnuncioProvincia (boolean) a travez de "sessionStorage.getItem" caso true cambia el valor de banderaAnuncioProvincia a true y no muestra la funcion anuncioBancoProvincia. 
+Caso contrario muestra el anuncio despues de 3 segundos "setInterval" cambia el valor de la variable banderaAnuncioProvincia a false y la guarda a travez de " sessionStorage.setItem"
 
-* numTotalCarrito
-Pide por parametro un array y recorre ese array para contar la cantidad de iteraciones y modifica el contador del carrito("contador que esta al lado del carrito en la pagina")
 
-*setNumUltimoCarrito 
-Pide por parametro un array y recorre ese array para contar la cantidad de iteraciones y retorna la dicha cantidad
+												Main
 
-*modificaNumCarrito 
-Pide por parametro un numero que utiliza para modificar el contador del carrito que es tomado con un getElementById("numCarrito")
+Utilizo fetch para solicitar datos a un archivo local y utilizo dichos datos para completar el area de comentarios a travez del DOM												
 
-*cargarTodosProductos 
-Carga productos del array Productos a travez del DOM
+										Categorias-Funciones
+
+* cargarTodosProductos
+
+Recibe array por parametro y realiza la carga a travez del DOM solicitando a cada objeto del array el valor solicitado. Tambien agrega evento "click" al boton agregar
+que a travez de la funcion agregarcarrito modifica el contador numerico de productos comprados en el carrito y carga el producto al array carrito. Tambien a travez de un sweet alert le avisa al cliente que el producto fue agregado al carrito
 
 *resultadoFilter
-recibe array con productos filtrados.. Borra los productos cargados en la pag y carga los productos filtrados recibido en el array(parametro)
+contiene la funcion "deleteTable" que borra todos los productos del DOM. El resto de la funcion es igual a la funcion "cargarTodosProductos" utilizado para cargar unicamente los productos que quiere ver el cliente.
+
+*createFilters 
+eventos "click" para filtrar productos
+
+* filterGenero * filterGenero * filterGenero
+devuelven array con el filtro solicitado 
+
+
+
 
 
 

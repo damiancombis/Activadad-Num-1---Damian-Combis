@@ -35,33 +35,18 @@
   display: inline-block;
   position: absolute;
   left: 91%;
-  top: 20px;
+  top: 27px;
 }
 .cantCarrito {
   display: inline-block;
   position: absolute;
-  top: -20px;
+  top: -13px;
   left: 95%;
 
   color: white;
   font-size: 40px;
 }
 
-.verCarrito {
-  position: relative;
-  top: 70px;
-  left: 585px;
-  width: 100px;
-}
-.boxListaCarrito {
-  position: absolute;
-  background-color: white;
-  z-index: 1;
-  width: 300px;
-  height: 500px;
-  top: 15vh;
-  right: 0vh;
-}
 .caja-seis-cuotas {
   display: flex;
   justify-content: center;
